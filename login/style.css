@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --button: #2196F3;
+    --main-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top-1 {
+    margin-top: 5px;
+}
+
+.top-2 {
+    margin-top: 15px;
+}
+
+.text {
+    padding: 6px;
+    font-size: 0.9em;
+}
+
+.button {
+    padding: 15px;
+    border: none;
+    background-color: var(--button);
+    color: white;
+    font-family: var(--main-font);
+    font-size: medium;
+}
+
+
+#login-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+    margin: 180px auto;
+    width: 25%;
+}

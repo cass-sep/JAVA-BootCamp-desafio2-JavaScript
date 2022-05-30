@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* sidepanel ------------------------------------------------------------*/
+
+body > main {
+    display: flex;
+    flex-direction: row;
+}
+
+main > #panel-box {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width:18%;
+    border-right: 1px solid lightgray;
+    z-index: 10;
+}
+
+
+#panel-box > #links > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 8px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: black;
+
+}
+
+/* sidepanel ------------------------------------------------------------*/
+
+/* content ==============================================================*/
+
+th{
+    text-align: start;
+}
+
+label{
+    color: grey;
+}
+
+
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-r-spb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.fechar-btn{
+    padding: 3px 8px;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+    font-family: inherit;
+    border: none;
+}
+
+.btn-disabled{
+    background-color: grey;
+    color: black;
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 28px;
+}
+
+.btn{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+
+}
+
+.item {
+    color: white;
+    font-weight: bold;
+    background-color: indigo;
+}
+
+.novo{
+    font-family: inherit;
+    background-color: dodgerblue;
+    color: white;
+    padding: 0 28px;
+}
+
+.salvar{
+    font-family: inherit;
+    background-color: green;
+    padding: 0 28px;
+}
+
+.text{
+    font-family: inherit;
+    font-size: medium;
+    font-weight: bold;
+    padding:5px;
+}
+
+.ma-b {
+    margin-bottom: 6px;
+}
+
+.azul {
+    color: darkslateblue;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+
+
+main > #content-box {
+    position:absolute;
+    left: 18%;
+    height: 100%;
+    width: 82%;
+}
+
+
+main > #content-box > section > form {
+    margin: 40px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#content-box > section > form > fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 2px;
+}
+
+#form-header{
+    margin-bottom: 20px;
+}
+
+#form-header > h3{
+    text-decoration: underline;
+}
+
+#rodape{
+    margin-top: 10px;
+}
+
+
+
+
+#form-clientes, #form-produtos {
+    width: 450px;
+}
+
+#form-pedidos {
+    width: 800px;
+}
+
+input#codigo {
+    color: gray;
+}
+
+
+#item-box{
+    gap:5px;
+}
+
+
+#acao-box {
+    gap:5px;
+}
+
+#mini-form-produto {
+    padding: 8px 3px;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+}
+
+#mini-form-produto > #codigo-mini-form{
+    width: 7%;
+}
+
+#mini-form-produto > #descricao-mini-form{
+    width: 40%;
+}
+
+#mini-form-produto > #preco-mini-form, #mini-form-produto > #qtd-mini-form {
+    width: 13%;
+}
+
+#mini-form-produto > #add-mini-form {
+    padding: 7px;
+    font-family: inherit;
+    width: 30%;
+}
+
+/* content ==============================================================*/
+
+/* eventos --------------------------------------------------------------*/
+.btn:hover,.fechar-btn, nav#links > a:hover{
+    cursor: pointer;
+}

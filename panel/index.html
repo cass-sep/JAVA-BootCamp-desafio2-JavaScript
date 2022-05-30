@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="module" src="main.js"></script>
+    <title>Painel - FlashJS</title>
+
+</head>
+
+<body>
+    <main>
+        <div id="panel-box">
+            <nav id="links">
+                <a id="clientes-btn">
+                    <span class="material-symbols-outlined" id="clientes-btn"> group_add</span>
+                    Clientes
+                </a>
+                <a id="produtos-btn">
+                    <span class="material-symbols-outlined" id="produtos-btn"> redeem </span>
+                    Produtos
+                </a>
+
+                <a id="pedidos-btn">
+                    <span class="material-symbols-outlined" id="pedidos-btn"> shopping_cart</span>
+                    Pedidos
+                </a>
+
+            </nav>
+        </div>
+        <div id="content-box">
+            <section id="content-section">
+
+                <form id="form-clientes" style="display: none;">
+                    <fieldset>
+                        <header id="form-header" class="flex-r-spb">
+                            <h3>Clientes</h3>
+                            <input type="button" class="fechar-btn" value="x" >
+                        </header>
+                        <main class="flex-c">
+                            <label>Código</label>
+                            <input type="text" class="text ma-b clientes" name="código" disabled="true">
+                            <label>Nome</label>
+                            <input type="text" class="text ma-b clientes" name="nome">
+                            <label>Data de Cadastro</label>
+                            <input type="text" class="text ma-b clientes" name="data de cadastro">
+                        </main>
+                        <footer class="flex-r-spb" id="rodape">
+                            <div class="flex-row" id="item-box">
+                                <input type="button" id="cliente-anterior" class="btn-anterior item btn" name="anterior" value="<" class="btn item">
+                                <input type="button" id="cliente-proximo" class="btn-proximo item btn" name="proximo" value=">" class="btn item">
+                            </div>
+                            <div class="flex-row" id="acao-box">
+                                <input type="button" id="cliente-novo" name="novo" value="Novo" class="btn novo">
+                                <input type="button" id="cliente-salvar" name="salvar" value="Salvar" class="btn salvar">
+                            </div>
+                        </footer>
+                    </fieldset>
+                </form>
+
+                <form id="form-produtos" style="display: none;">
+                    <fieldset>
+                        <header id="form-header" class="flex-r-spb">
+                            <h3>Produtos</h3>
+                            <input type="button" class="fechar-btn" value="x" >
+                        </header>
+                        <main class="flex-c">
+                            <label>Código</label>
+                            <input type="text" class="text ma-b produtos" name="código" disabled="true">
+                            <label>Descrição</label>
+                            <input type="text" class="text ma-b produtos" name="descrição">
+                            <label>Preço</label>
+                            <input type="text" class="text ma-b produtos" name="preço">
+                            <label>Quantidade</label>
+                            <input type="text" class="text ma-b produtos" name="quantidade">
+                        </main>
+                        <footer class="flex-r-spb" id="rodape">
+                            <div class="flex-row" id="item-box">
+                                <input type="button" id="produto-anterior" class="btn-anterior item btn" name="anterior" value="<" class="btn item">
+                                <input type="button" id="produto-proximo" class="btn-proximo item btn" name="proximo" value=">" class="btn item">
+                            </div>
+                            <div class="flex-row" id="acao-box">
+                                <input type="button" id="produto-novo" name="novo" value="Novo" class="btn novo">
+                                <input type="button" id="produto-salvar" name="salvar" value="Salvar" class="btn salvar">
+                            </div>
+                        </footer>
+                    </fieldset>
+                </form>
+
+                <form id="form-pedidos" style="display: none;">
+                    <fieldset>
+                        <header id="form-header" class="flex-r-spb">
+                            <h3>Pedidos</h3>
+                            <input type="button" class="fechar-btn" value="x" >
+                        </header>
+                        <main class="flex-c">
+                            <label>Código do Cliente</label>
+                            <input type="text" class="text ma-b pedidos" id="pedido-codigo" name="cliente">
+                            <label>Cliente</label>
+                            <input type="text" class="text ma-b pedidos" id="pedido-cliente" name="cliente" disabled="true">
+                            <hr>
+                            <label for="mini-form-produto" class="azul">Localizar Produto</label>
+                            <div id="mini-form-produto" class="ma-b">
+                                <input type="text" class="text pedidos p-inp" name="codigo-produto" value="" id="codigo-mini-form">
+                                <input type="text" class="text pedidos p-inp" name="descricao-produto" value="" id="descricao-mini-form" disabled="true">
+                                <input type="text" class="text pedidos p-inp" name="preco-produto" value="" id="preco-mini-form" disabled="true">
+                                <input type="text" class="text pedidos p-inp" name="qtd-produto" value="" id="qtd-mini-form">
+                                <input type="button" name="add-produto" value="Lançar no Pedido" id="add-mini-form">
+                            </div>
+                            <hr>
+                            <label for="table-produto" class="azul">Itens do Pedido</label>
+                            <table id="table-produto">
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Descrição</th>
+                                    <th>Preço</th>
+                                    <th>Qtd</th>
+                                    <th>Sub Total</th>
+                                </tr>
+                            </table>
+                            <div style="display: flex; justify-content: end;">
+                                <span style="background-color: gainsboro; color:red;" id="sub-total-table"></span>
+                            </div>
+                        </main>
+                        
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
